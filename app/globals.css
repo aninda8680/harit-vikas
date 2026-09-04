@@ -1,0 +1,221 @@
+@import "tailwindcss";
+
+/* ============================================================
+   HARIT VIKAS — EDITORIAL DESIGN TOKENS (v2)
+   Cream-and-forest-green palette. To reskin, change tokens here.
+   ============================================================ */
+
+@theme inline {
+  /* Brand Colors */
+  --color-hv-forest:      #0fa66e;
+  --color-hv-forest-dark: #0d8c64;
+  --color-hv-forest-mid:  #29ba76;
+  --color-hv-sage:        #2fcc70;
+  --color-hv-mint:        #49d68b;
+  --color-hv-mist:        #dcf5e6;
+
+  /* Base */
+  --color-hv-cream:       #ffffff;   /* Pure white base */
+  --color-hv-cream-dark:  #f8f9fa;   /* Very light gray for cards/contrast */
+  --color-hv-white:       #ffffff;
+
+  /* Text */
+  --color-hv-ink:         #1a2421;   /* dark green-gray primary text */
+  --color-hv-ink-mid:     #354a43;   /* secondary text */
+  --color-hv-ink-light:   #5b7a6f;   /* muted / caption */
+
+  /* Accent dot */
+  --color-hv-accent:      #2fcc70;
+
+  /* Typography */
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body:    "Inter", system-ui, sans-serif;
+
+  /* Shadows */
+  --shadow-soft: 0 2px 16px rgba(15,76,58,0.07);
+  --shadow-card: 0 4px 28px rgba(15,76,58,0.10);
+  --shadow-card-hover: 0 12px 48px rgba(15,76,58,0.18);
+  --shadow-nav: 0 2px 20px rgba(10,51,40,0.08);
+
+  /* Radius */
+  --radius-pill: 9999px;
+  --radius-card: 1.5rem;
+  --radius-img:  1.25rem;
+}
+
+/* ============================================================
+   GLOBAL BASE
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+/* Lenis smooth-scroll base (replaces CSS scroll-behavior: smooth,
+   which must stay off while Lenis drives the wheel). */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+body {
+  background-color: var(--color-hv-cream);
+  color: var(--color-hv-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--color-hv-ink);
+  line-height: 1.15;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-hv-sage);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: var(--color-hv-mint);
+  color: var(--color-hv-forest-dark);
+}
+
+/* ============================================================
+   UTILITIES
+   ============================================================ */
+
+/* Pill badge (small eyebrow label) */
+.hv-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.3rem 0.875rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-family: var(--font-body);
+  border: 1.5px solid rgba(15,76,58,0.18);
+  color: var(--color-hv-forest);
+  background: rgba(15,76,58,0.06);
+}
+
+.hv-badge-dark {
+  border-color: rgba(136,184,160,0.25);
+  color: var(--color-hv-mint);
+  background: rgba(136,184,160,0.08);
+}
+
+/* Pill button — dark */
+.btn-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: var(--radius-pill);
+  background: var(--color-hv-forest);
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+  transition: background 0.25s, transform 0.25s, box-shadow 0.25s;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-dark:hover {
+  background: var(--color-hv-forest-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(10,51,40,0.22);
+}
+
+/* Pill button — outline */
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.5rem;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--color-hv-forest);
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+  border: 2px solid var(--color-hv-forest);
+  transition: all 0.25s;
+}
+
+.btn-outline:hover {
+  background: var(--color-hv-forest);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Card base */
+.hv-card {
+  background: var(--color-hv-white);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.hv-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-5px);
+}
+
+/* Section spacing */
+.section-py {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+@media (min-width: 768px) {
+  .section-py {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+/* Eyebrow dot */
+.hv-badge::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-hv-accent);
+  flex-shrink: 0;
+}
+
+/* Dark section token override
+   --section-fg is used by child elements so text color is inherited,
+   not duplicated with hardcoded classes. This prevents body's ink color
+   from bleeding in and causing WCAG contrast failures. */
+.dark-section {
+  background: var(--color-hv-forest-dark);
+  color: var(--color-hv-white);
+  --section-fg: var(--color-hv-white);
+  border-radius: 2rem;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 7px; }
+::-webkit-scrollbar-track { background: var(--color-hv-cream); }
+::-webkit-scrollbar-thumb { background: var(--color-hv-mist); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-hv-sage); }
+
+/* World map dots utility (for SVG map in analytics section) */
+.map-dot {
+  fill: rgba(136,184,160,0.8);
+  animation: mapPulse 3s ease-in-out infinite;
+}
+
+@keyframes mapPulse {
+  0%, 100% { opacity: 0.7; r: 3; }
+  50% { opacity: 1; r: 4.5; }
+}
