@@ -11,7 +11,7 @@ export default function CTA() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
-        className="max-w-[90rem] mx-auto rounded-[3rem] bg-[color:var(--color-hv-forest-dark)] p-12 md:p-24 text-center relative overflow-hidden flex flex-col items-center shadow-2xl"
+        className="max-w-[90rem] mx-auto rounded-[2rem] md:rounded-[3rem] bg-[color:var(--color-hv-forest-dark)] p-8 sm:p-12 md:p-24 text-center relative overflow-hidden flex flex-col items-center shadow-2xl"
       >
         {/* Animated glowing orbs in background */}
         <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[color:var(--color-hv-mint)]/20 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2 animate-[spin_15s_linear_infinite]" />
@@ -30,7 +30,7 @@ export default function CTA() {
         <span className="hv-badge-dark mb-10 relative z-10 shadow-lg">Let's Work Together</span>
         
         <h2 
-          className="text-4xl md:text-6xl lg:text-7xl font-bold !text-white max-w-5xl mb-8 leading-[1.1] relative z-10 drop-shadow-sm"
+          className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold !text-white max-w-5xl mb-6 sm:mb-8 leading-[1.1] relative z-10 drop-shadow-sm"
           style={{ fontFamily: "var(--font-display)" }}
         >
           Partner with us to create <span className="italic !text-white">meaningful change.</span>

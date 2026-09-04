@@ -18,11 +18,11 @@ const projects: Project[] = [
   {
     id: "aim",
     name: "AIM",
-    initiative: "Project Sayan",
+    initiative: "Project saaya",
     description:
       "Agricultural Intelligence & Monitoring — a real-time data and analytics platform for sustainable farm management.",
     longDescription:
-      "AIM is the flagship data platform under Project Sayan, combining geotagged IoT sensor data, satellite imagery, and cloud analytics to give farmers and agronomists actionable insights on soil health, water usage, crop performance, and climate risk.",
+      "AIM is the flagship data platform under Project saaya, combining geotagged IoT sensor data, satellite imagery, and cloud analytics to give farmers and agronomists actionable insights on soil health, water usage, crop performance, and climate risk.",
     url: "https://aim.harit-vikas.com",
     image: "/placeholders/project-aim.svg",
     tags: ["IoT", "Cloud Analytics", "MRV", "AgriTech"],
@@ -43,17 +43,17 @@ const fadeUp = {
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 lg:py-32 bg-[color:var(--color-hv-cream)]">
-      <div className="max-w-7xl mx-auto px-6">
-        
+    <section id="projects" className="py-14 sm:py-24 lg:py-32 bg-[color:var(--color-hv-cream)]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-20">
           <div className="max-w-2xl">
-            <span className="hv-badge mb-6 inline-block">Our Projects</span>
-            <h2 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-[color:var(--color-hv-forest-dark)] leading-[1.1]"
+            <span className="hv-badge mb-4 sm:mb-6 inline-block">Our Projects</span>
+            <h2
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[color:var(--color-hv-forest-dark)] leading-[1.1]"
               style={{ fontFamily: "var(--font-display)" }}
             >
-              Building tools for a<br/><span className="italic text-[color:var(--color-hv-sage)]">sustainable future</span>
+              Building tools for a<br /><span className="italic text-[color:var(--color-hv-sage)]">sustainable future</span>
             </h2>
           </div>
           <div className="hidden md:block pb-2">
@@ -63,7 +63,7 @@ export default function Projects() {
           </div>
         </div>
 
-        <motion.div 
+        <motion.div
           variants={stagger}
           initial="hidden"
           whileInView="show"
@@ -79,7 +79,7 @@ export default function Projects() {
               rel="noopener noreferrer"
               className="group flex flex-col bg-white rounded-[2rem] overflow-hidden cursor-pointer shadow-[var(--shadow-soft)] hover:shadow-[0_20px_40px_-15px_rgba(10,51,40,0.15)] hover:-translate-y-2 transition-all duration-500 border border-[color:var(--color-hv-mist)]"
             >
-              <div className="relative w-full h-[320px] overflow-hidden bg-[color:var(--color-hv-mist)]">
+              <div className="relative w-full h-[220px] sm:h-[280px] md:h-[320px] overflow-hidden bg-[color:var(--color-hv-mist)]">
                 <Image
                   src={project.image}
                   alt={project.name}
@@ -88,7 +88,7 @@ export default function Projects() {
                   unoptimized={project.image.endsWith(".svg")}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                
+
                 <div className="absolute top-5 right-5 bg-white/95 backdrop-blur-md px-4 py-2 rounded-full shadow-lg flex items-center gap-2.5">
                   <div className={`w-2 h-2 rounded-full ${project.status === 'Live' ? 'bg-green-500' : 'bg-amber-500'} shadow-[0_0_8px_currentColor]`} />
                   <span className="text-[0.7rem] font-bold uppercase tracking-widest text-[color:var(--color-hv-ink-dark)]">
@@ -101,7 +101,7 @@ export default function Projects() {
                 <span className="text-xs font-bold uppercase tracking-[0.2em] text-[color:var(--color-hv-sage)] mb-4 block">
                   {project.initiative}
                 </span>
-                <h3 
+                <h3
                   className="text-2xl lg:text-3xl font-bold text-[color:var(--color-hv-forest-dark)] mb-4 leading-tight group-hover:text-[color:var(--color-hv-mint)] transition-colors duration-300"
                   style={{ fontFamily: "var(--font-display)" }}
                 >
@@ -110,7 +110,7 @@ export default function Projects() {
                 <p className="text-[color:var(--color-hv-ink-mid)] leading-relaxed mb-10 flex-1">
                   {project.description}
                 </p>
-                
+
                 <div className="flex items-center gap-2 font-bold text-[color:var(--color-hv-forest)] group-hover:text-[color:var(--color-hv-sage)] transition-colors">
                   Visit Project
                   <ArrowUpRight size={18} className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
@@ -119,7 +119,7 @@ export default function Projects() {
             </motion.a>
           ))}
         </motion.div>
-        
+
       </div>
     </section>
   );

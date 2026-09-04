@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     "MRV",
     "climate tech",
     "sustainable farming",
-    "Project Sayan",
+    "Project saaya",
     "India green tech",
   ],
   authors: [{ name: "Horizon Vikas Technologies" }],

@@ -2,10 +2,10 @@ import { Mail, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-[color:var(--color-hv-cream-dark)] pt-20 pb-10">
-      <div className="max-w-7xl mx-auto px-6">
+    <footer className="bg-[color:var(--color-hv-cream-dark)] pt-12 sm:pt-20 pb-8 sm:pb-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-8 sm:gap-12 mb-12 sm:mb-16">
           
           <div className="md:col-span-5 flex flex-col items-start">
             <div className="flex items-center gap-2 mb-6">

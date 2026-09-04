@@ -21,11 +21,11 @@ const fadeUp = {
 
 export default function DevelopmentPath() {
   return (
-    <section id="about" className="py-24 lg:py-32 bg-[color:var(--color-hv-cream)] relative overflow-hidden">
+    <section id="about" className="py-14 sm:py-24 lg:py-32 bg-[color:var(--color-hv-cream)] relative overflow-hidden">
       {/* Subtle abstract background accent */}
       <div className="absolute top-0 right-0 w-full max-w-[800px] h-[800px] bg-[color:var(--color-hv-sage)]/5 rounded-full blur-[100px] -translate-y-1/2 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
           {/* Left Column */}
@@ -42,7 +42,7 @@ export default function DevelopmentPath() {
             
             <motion.h2 
               variants={fadeUp}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-[color:var(--color-hv-forest-dark)] leading-[1.1] mb-12 break-words"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[color:var(--color-hv-forest-dark)] leading-[1.1] mb-8 sm:mb-12 break-words"
               style={{ fontFamily: "var(--font-display)" }}
             >
               Our development path:<br/>from idea to impact

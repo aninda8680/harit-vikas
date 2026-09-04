@@ -42,14 +42,14 @@ export default function ValuesGrid() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section id="focus-areas" className="py-24 lg:py-32 bg-[color:var(--color-hv-cream)]">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="focus-areas" className="py-14 sm:py-24 lg:py-32 bg-[color:var(--color-hv-cream)]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         
         {/* Top: Title */}
-        <div className="max-w-4xl mb-16">
-           <span className="hv-badge mb-6">Our Focus</span>
+        <div className="max-w-4xl mb-10 sm:mb-16">
+           <span className="hv-badge mb-4 sm:mb-6">Our Focus</span>
            <h2 
-             className="text-4xl md:text-5xl lg:text-6xl font-bold text-[color:var(--color-hv-forest-dark)] leading-[1.1]"
+             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[color:var(--color-hv-forest-dark)] leading-[1.1]"
              style={{ fontFamily: "var(--font-display)" }}
            >
              Our focus areas,<br/>which drive <span className="italic text-[color:var(--color-hv-sage)]">everything we do</span>
@@ -67,7 +67,7 @@ export default function ValuesGrid() {
                 onMouseEnter={() => setActiveIndex(idx)}
                 className={`
                   cursor-pointer rounded-[2rem] p-8 md:p-10 w-full
-                  transition-all duration-500 ease-[cubic-bezier(0.25,0.1,0.25,1)] flex flex-col justify-between min-h-[420px] lg:min-h-[480px] text-white
+                  transition-all duration-500 ease-[cubic-bezier(0.25,0.1,0.25,1)] flex flex-col justify-between min-h-[340px] sm:min-h-[420px] lg:min-h-[480px] text-white
                   bg-[color:var(--color-hv-forest-dark)]
                   ${isActive 
                     ? "shadow-[0_20px_40px_-15px_rgba(10,51,40,0.5)] scale-[1.02] border border-white/20 z-10 relative opacity-100" 

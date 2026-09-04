@@ -12,7 +12,7 @@ export default function ImpactPhotoSection() {
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
-        className="relative w-full h-[75vh] min-h-[600px] rounded-[2.5rem] overflow-hidden shadow-2xl group"
+        className="relative w-full h-[70vh] min-h-[500px] md:min-h-[600px] rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl group"
       >
         {/* Background Image with slow zoom on hover */}
         <Image
@@ -26,7 +26,7 @@ export default function ImpactPhotoSection() {
         {/* Targeted Gradient Overlays (avoiding muddying the whole image) */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent lg:w-3/4 lg:bg-gradient-to-tr lg:from-[color:var(--color-hv-forest-dark)]/90 lg:via-[color:var(--color-hv-forest-dark)]/40 lg:to-transparent mix-blend-multiply" />
         
-        <div className="absolute inset-0 p-8 md:p-14 lg:p-20 flex flex-col justify-between z-10">
+        <div className="absolute inset-0 p-5 sm:p-8 md:p-14 lg:p-20 flex flex-col justify-between z-10">
           
           {/* Top/Left Content */}
           <div className="max-w-3xl">
@@ -44,7 +44,7 @@ export default function ImpactPhotoSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-4xl md:text-5xl lg:text-7xl font-bold !text-white leading-[1.1] mt-4 drop-shadow-md"
+              className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold !text-white leading-[1.1] mt-3 md:mt-4 drop-shadow-md"
               style={{ fontFamily: "var(--font-display)" }}
             >
               We build sustainable systems, reliable data, and <span className="italic !text-white">community-first impact.</span>

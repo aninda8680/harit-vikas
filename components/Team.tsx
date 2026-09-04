@@ -14,10 +14,10 @@ type TeamMember = {
 const founders: TeamMember[] = [
   {
     id: "owner-1",
-    name: "Sayan Chakraborty",
+    name: "saaya Chakraborty",
     role: "CEO & Co-Founder",
     tag: "Founder",
-    image: "/placeholders/sayan.jpeg",
+    image: "/placeholders/saaya.jpeg",
     bio: "Visionary leader driving Harit Vikas's mission at the intersection of technology and sustainability.",
   },
   {
@@ -151,14 +151,12 @@ function FounderCard({ member }: { member: TeamMember }) {
         {member.tag && (
           <span className="inline-flex items-center gap-1.5">
             <span
-              className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${
-                tagDotColor[member.tag] ?? "bg-[color:var(--color-hv-sage)]"
-              }`}
+              className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${tagDotColor[member.tag] ?? "bg-[color:var(--color-hv-sage)]"
+                }`}
             />
             <span
-              className={`text-[0.62rem] font-bold uppercase tracking-widest ${
-                tagTextColor[member.tag] ?? "text-[color:var(--color-hv-sage)]"
-              }`}
+              className={`text-[0.62rem] font-bold uppercase tracking-widest ${tagTextColor[member.tag] ?? "text-[color:var(--color-hv-sage)]"
+                }`}
             >
               {member.tag}
             </span>
@@ -243,20 +241,20 @@ export default function Team() {
   return (
     <section
       id="team"
-      className="py-20 lg:py-28 bg-gradient-to-b from-[color:var(--color-hv-cream)] to-white"
+      className="py-14 sm:py-20 lg:py-28 bg-gradient-to-b from-[color:var(--color-hv-cream)] to-white"
     >
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
         {/* Section header — left-aligned, label + rule */}
-        <div className="mb-16">
-          <div className="flex items-center gap-3 mb-5">
+        <div className="mb-10 sm:mb-16">
+          <div className="flex items-center gap-3 mb-4 sm:mb-5">
             <span className="text-[0.72rem] font-semibold tracking-[0.2em] uppercase text-[color:var(--color-hv-sage)]">
               Our Team
             </span>
             <span className="h-px w-10 bg-[color:var(--color-hv-sage)]/40" aria-hidden="true" />
           </div>
           <h2
-            className="text-4xl md:text-5xl lg:text-[3rem] font-bold text-[color:var(--color-hv-forest-dark)] leading-[1.1] tracking-tight max-w-xl"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-[3rem] font-bold text-[color:var(--color-hv-forest-dark)] leading-[1.1] tracking-tight max-w-xl"
             style={{ fontFamily: "var(--font-display)" }}
           >
             The people behind the{" "}
@@ -265,7 +263,7 @@ export default function Team() {
         </div>
 
         {/* Two-column: founder portraits left, core team roster right */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] xl:grid-cols-[1fr_380px] gap-10 lg:gap-16 items-start">
 
           {/* Left: Founder portrait grid */}
           <div>

@@ -32,7 +32,7 @@ const verticals = [
       },
     ],
     initiative: {
-      name: "Project Sayan",
+      name: "Project saaya",
       desc: "Our active flagship initiative — covering Sustainable Farming intelligence and precision Data Plotting across agricultural regions.",
     },
     accentBg: "from-[#0A3328] to-[#0F4C3A]",
