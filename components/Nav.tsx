@@ -66,11 +66,11 @@ export default function Nav() {
           <Link href="/" className="flex items-center gap-2 flex-shrink-0 group" onClick={closeMenu}>
             <span className="relative block w-8 h-8 shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-110">
               <Image
-                src="/logo.png"
+                src="/HV_logo.png"
                 alt="Harit Vikas logo"
                 fill
                 sizes="32px"
-                className="object-contain mix-blend-screen"
+                className="object-contain"
               />
             </span>
             <span
