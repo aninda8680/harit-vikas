@@ -28,23 +28,13 @@ export default function ImpactPhotoSection() {
         
         <div className="absolute inset-0 p-5 sm:p-8 md:p-14 lg:p-20 flex flex-col justify-between z-10">
           
-          {/* Top/Left Content */}
           <div className="max-w-3xl">
-            <motion.span 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="hv-badge-dark mb-6 inline-block shadow-lg"
-            >
-              Our Mission
-            </motion.span>
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold !text-white leading-[1.1] mt-3 md:mt-4 drop-shadow-md"
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold !text-white leading-[1.1] drop-shadow-md"
               style={{ fontFamily: "var(--font-display)" }}
             >
               We build sustainable systems, reliable data, and <span className="italic !text-white">community-first impact.</span>

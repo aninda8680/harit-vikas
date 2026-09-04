@@ -14,10 +14,10 @@ type TeamMember = {
 const founders: TeamMember[] = [
   {
     id: "owner-1",
-    name: "saaya Chakraborty",
+    name: "Sayan Chakraborty",
     role: "CEO & Co-Founder",
     tag: "Founder",
-    image: "/placeholders/saaya.jpeg",
+    image: "/placeholders/sayan.jpeg",
     bio: "Visionary leader driving Harit Vikas's mission at the intersection of technology and sustainability.",
   },
   {
